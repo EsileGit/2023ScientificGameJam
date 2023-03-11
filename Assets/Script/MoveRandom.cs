@@ -10,7 +10,7 @@ public class MoveRandom : MonoBehaviour
     [Inspectable]
     public Vector2 direction = new Vector2 (0, 1);
     [Inspectable]
-    public float speed = 0.001f; // pix/s
+    public float speed = 0.1f; // pix/s
     [Inspectable]
     public float chanceOfChangingDirection = 0.1f;
 
@@ -21,16 +21,26 @@ public class MoveRandom : MonoBehaviour
     {
         Debug.Log("Start " + name);
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(direction * speed, ForceMode2D.Impulse);
+        AddRandomImpulse();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(speed * direction);
+        if (_GetRand() < chanceOfChangingDirection * Time.deltaTime)
+        {
+            AddRandomImpulse();
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void AddRandomImpulse()
+    {
+        Vector2 normRandomVec = new Vector2(_GetRand(), _GetRand());
+        normRandomVec.Normalize();
+        rb.AddForce(normRandomVec * speed, ForceMode2D.Impulse);
+    }
+
+    void OnCollisionEnter(Collision collision)
     {
         Debug.Log("OnCollisionEnter!" + collision.gameObject.tag);
         // Check if the collision occurred with the border
@@ -39,5 +49,10 @@ public class MoveRandom : MonoBehaviour
             // Handle the collision with the border
             Debug.Log("Collision with border detected!");
         }
+    }
+
+    private float _GetRand()
+    {
+        return UnityEngine.Random.Range(0.0f, 1.0f);
     }
 }

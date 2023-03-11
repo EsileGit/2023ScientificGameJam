@@ -81,3 +81,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06a2380173f0f9a4aadb12b14abdc404, type: 3}
+--- !u!1 &2263666636407095515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2277601908428256024, guid: 06a2380173f0f9a4aadb12b14abdc404, type: 3}
+  m_PrefabInstance: {fileID: 67978481789367235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6717958115655435261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263666636407095515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c3c633d0c4ad446a894bd3c60262d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killerTagList:
+  - SKI

@@ -19,7 +19,6 @@ public class MoveRandom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start " + name);
         rb = GetComponent<Rigidbody2D>();
         AddRandomImpulse();
     }
@@ -38,17 +37,6 @@ public class MoveRandom : MonoBehaviour
         Vector2 normRandomVec = new Vector2(_GetRand(), _GetRand());
         normRandomVec.Normalize();
         rb.AddForce(normRandomVec * speed, ForceMode2D.Impulse);
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("OnCollisionEnter!" + collision.gameObject.tag);
-        // Check if the collision occurred with the border
-        if (collision.gameObject.tag == "CellBoundary")
-        {
-            // Handle the collision with the border
-            Debug.Log("Collision with border detected!");
-        }
     }
 
     private float _GetRand()

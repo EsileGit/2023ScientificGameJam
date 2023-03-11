@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5037102035657423505}
   - component: {fileID: 1685575340522158084}
+  - component: {fileID: 8473955478610681172}
   m_Layer: 0
   m_Name: RNA-prefab
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8473955478610681172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5690485957353583269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462b472d52e960d4488d73d88cbc923e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

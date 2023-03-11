@@ -40,7 +40,7 @@ public class MoveRandom : MonoBehaviour
         rb.AddForce(normRandomVec * speed, ForceMode2D.Impulse);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("OnCollisionEnter!" + collision.gameObject.tag);
         // Check if the collision occurred with the border

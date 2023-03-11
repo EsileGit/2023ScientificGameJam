@@ -20,6 +20,15 @@ public class RNABehavior : MonoBehaviour
 
     private void _KillSelf()
     {
-        Destroy(gameObject);
+        if (!_IsImmune())
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private bool _IsImmune()
+    {
+        GameObject gameManager = SaveData.gameManager();
+        return Time.time < gameManager.GetComponent<SaveData>().elementsSpawning.nbSkiImmunitySec;
     }
 }

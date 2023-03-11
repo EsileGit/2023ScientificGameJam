@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
+    public static string GameManagerTag = "GameManager";
+
     [SerializeField] public ScoringEvaluation scoring = new ScoringEvaluation();
     [SerializeField] public SpawningData elementsSpawning = new SpawningData();
 
+    public static GameObject gameManager() { return GameObject.FindWithTag(SaveData.GameManagerTag); }
     public void SaveIntoJson()
     {
         Debug.Log("SAVE Application.streamingAssetsPath : " + Application.streamingAssetsPath);
@@ -44,4 +47,6 @@ public class SpawningData
     public int viralRNASpawnRatePerSec;
     public int cellRNASpawnRatePerSec;
     public int skiSpawnRatePerSec;
+
+    public float nbSkiImmunitySec;
 }

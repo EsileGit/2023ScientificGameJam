@@ -46,14 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoring:
-    pointsPerViralRNAPerSec: 0
+    pointsPerViralRNAPerSec: 1
   elementsSpawning:
-    viralRNAInitCount: 0
-    cellRNAInitCount: 0
-    skiInitCount: 0
-    viralRNASpawnRatePerSec: 0
-    cellRNASpawnRatePerSec: 0
-    skiSpawnRatePerSec: 0
+    viralRNAInitCount: 1
+    cellRNAInitCount: 1
+    skiInitCount: 1
+    viralRNASpawnRatePerSec: 1
+    cellRNASpawnRatePerSec: 1
+    skiSpawnRatePerSec: 1
+    nbSkiImmunitySec: 0
 --- !u!114 &-5818577559465845747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,4 +70,4 @@ MonoBehaviour:
   viralRNAPrefab: {fileID: 1808501825090551393, guid: 4a2ae7e461eb95943844af8572d9f710, type: 3}
   cellRNAPrefab: {fileID: 2263666636407095515, guid: 1e3a78dea99e00c4ba277eed2bf38c1d, type: 3}
   SKIPrefab: {fileID: 6617735228217439061, guid: 3389de909e978c7449eb2c7c5cdf9d8c, type: 3}
-  maxRadiusSpawn: 0
+  maxRadiusSpawn: 4

@@ -61,3 +61,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# My own scene (add your own)
+#[Aa]ssets/Scenes/TestElise.unity

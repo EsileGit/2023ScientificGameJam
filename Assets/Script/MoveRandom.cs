@@ -34,7 +34,7 @@ public class MoveRandom : MonoBehaviour
 
     void AddRandomImpulse()
     {
-        Vector2 normRandomVec = new Vector2(_GetRand(), _GetRand());
+        Vector2 normRandomVec = new Vector2(_GetRandNegative(), _GetRandNegative());
         normRandomVec.Normalize();
         rb.AddForce(normRandomVec * speed, ForceMode2D.Impulse);
     }
@@ -42,5 +42,9 @@ public class MoveRandom : MonoBehaviour
     private float _GetRand()
     {
         return UnityEngine.Random.Range(0.0f, 1.0f);
+    }
+    private float _GetRandNegative()
+    {
+        return UnityEngine.Random.Range(-1.0f, 1.0f);
     }
 }

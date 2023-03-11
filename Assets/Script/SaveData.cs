@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
-    [SerializeField] private ScoringEvaluation scoring = new ScoringEvaluation();
-    [SerializeField] private SpawningData elementsSpawning = new SpawningData();
+    [SerializeField] public ScoringEvaluation scoring = new ScoringEvaluation();
+    [SerializeField] public SpawningData elementsSpawning = new SpawningData();
 
     public void SaveIntoJson()
     {

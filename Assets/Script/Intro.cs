@@ -7,7 +7,7 @@ public class Intro : MonoBehaviour
 {
     void OnEnable()
     {
-        SceneManager.LoadScene("TestElise", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 
 }

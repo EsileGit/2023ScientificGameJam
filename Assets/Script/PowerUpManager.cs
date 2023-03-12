@@ -87,10 +87,16 @@ public class PowerUpManager : MonoBehaviour
     {
         PowerUp powerUpData = allPowerUps.GetElement(lastSpawned - 1);
         powerUps[0].SetActive(false);
+        powerUps[1].SetActive(false);
+
+        SaveData.gameManager().GetComponent<SaveData>().elementsSpawning.viralRNASpawnRatePerSec += 0.2f;
     }
     public void OnSecondPowerUpClicked()
     {
         PowerUp powerUpData = allPowerUps.GetElement(lastSpawned - 1);
+        powerUps[0].SetActive(false);
         powerUps[1].SetActive(false);
+
+        SaveData.gameManager().GetComponent<SaveData>().elementsSpawning.cellRNASpawnRatePerSec += 0.2f;
     }
 }

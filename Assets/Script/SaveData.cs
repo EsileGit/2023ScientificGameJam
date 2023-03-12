@@ -44,9 +44,9 @@ public class SpawningData
     public int cellRNAInitCount;
     public int skiInitCount;
 
-    public int viralRNASpawnRatePerSec;
-    public int cellRNASpawnRatePerSec;
-    public int skiSpawnRatePerSec;
+    public float viralRNASpawnRatePerSec;
+    public float cellRNASpawnRatePerSec;
+    public float skiSpawnRatePerSec;
 
     public float nbSkiImmunitySec;
 }

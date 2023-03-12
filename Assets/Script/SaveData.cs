@@ -13,7 +13,7 @@ public class SaveData : MonoBehaviour
     public static GameObject gameManager() { return GameObject.FindWithTag(SaveData.GameManagerTag); }
     public void SaveIntoJson()
     {
-        Debug.Log("SAVE Application.streamingAssetsPath : " + Application.streamingAssetsPath);
+        //Debug.Log("SAVE Application.streamingAssetsPath : " + Application.streamingAssetsPath);
         string scoringStr = JsonUtility.ToJson(scoring);
         File.WriteAllText(Application.streamingAssetsPath + "/ScoringEvaluation.json", scoringStr);
 
@@ -21,7 +21,7 @@ public class SaveData : MonoBehaviour
     }
     public void LoadFromJson()
     {
-        Debug.Log("LOAD Application.streamingAssetsPath : " + Application.streamingAssetsPath);
+        //Debug.Log("LOAD Application.streamingAssetsPath : " + Application.streamingAssetsPath);
         string jsonContent = File.ReadAllText(Application.streamingAssetsPath + "/ScoringEvaluation.json");
         scoring = JsonUtility.FromJson<ScoringEvaluation>(jsonContent);
 

@@ -18,4 +18,16 @@ public class PowerUpList
     {
         allPowerUps.Add(item);
     }
+    public int Count()
+    {
+        return allPowerUps.Count;
+    }
+
+    public PowerUp GetElement(int index)
+    {
+        if (index >= allPowerUps.Count)
+            return null;
+
+        return allPowerUps[index];
+    }
 }

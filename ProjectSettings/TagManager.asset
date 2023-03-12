@@ -8,6 +8,7 @@ TagManager:
   - RNA
   - SKI
   - GameManager
+  - PowerUpUi
   layers:
   - Default
   - TransparentFX

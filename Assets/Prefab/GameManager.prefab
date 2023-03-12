@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6524331229689203523}
   - component: {fileID: 1132058964260220610}
   - component: {fileID: -5818577559465845747}
+  - component: {fileID: 7993014489794940859}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: PowerUpUi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,3 +72,18 @@ MonoBehaviour:
   cellRNAPrefab: {fileID: 2263666636407095515, guid: 1e3a78dea99e00c4ba277eed2bf38c1d, type: 3}
   SKIPrefab: {fileID: 6617735228217439061, guid: 3389de909e978c7449eb2c7c5cdf9d8c, type: 3}
   maxRadiusSpawn: 4
+--- !u!114 &7993014489794940859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103604546584067962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc33ed951ea7e14fb5e4d3e7d0e1506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  allPowerUps:
+    allPowerUps: []

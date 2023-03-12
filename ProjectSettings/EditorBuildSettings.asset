@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: f79d84e2e4ebe1d36a2f17184e3d1b22
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestElise.unity
     guid: 3655dc99f1317514796ec7eaae5a7eaf
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 48ef9b8b3da6b674c81915f53a6db7d5
   m_configObjects: {}

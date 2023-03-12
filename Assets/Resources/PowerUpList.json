@@ -1,0 +1,5 @@
+{
+"allPowerUps":[
+{"title":"Viral RNA Boost","description":"Viral RNA spawn rate is increased by 2","imagePath":"PowerUpImages/RNAStrandVirus"},
+{"title":"Cell RNA Boost","description":"Cell RNA spawn rate is increased by 2","imagePath":"PowerUpImages/RNAStrandCell"}
+]}

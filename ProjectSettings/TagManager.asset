@@ -9,6 +9,9 @@ TagManager:
   - SKI
   - GameManager
   - PowerUpUi
+  - scoreTag
+  - cellLifeTag
+  - viralRNA
   layers:
   - Default
   - TransparentFX

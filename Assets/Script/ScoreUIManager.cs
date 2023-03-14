@@ -56,7 +56,7 @@ public class ScoreUIManager : MonoBehaviour
             cellLifePercent = 0;
         if (cellLifePercent > 1)
             cellLifePercent = 1;
-
+        UpdateUI();
     }
 
     void UpdateUI()

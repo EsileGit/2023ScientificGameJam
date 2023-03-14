@@ -1,5 +1,5 @@
 {
 "allPowerUps":[
-{"title":"Viral RNA Boost","description":"Increase of viral RNA","imagePath":"PowerUpImages/ROUGE.png"},
-{"title":"Cell RNA Boost","description":"Viral RNA sensing and immune detection","imagePath":"PowerUpImages/VERT.png"}
+{"title":"Viral RNA Boost","description":"Increase of viral RNA","imagePath":"PowerUpImages/ROUGE"},
+{"title":"Cell RNA Boost","description":"Viral RNA sensing and immune detection","imagePath":"PowerUpImages/VERT"}
 ]}

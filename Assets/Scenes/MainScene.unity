@@ -514,6 +514,10 @@ PrefabInstance:
       propertyPath: powerUpPrefab
       value: 
       objectReference: {fileID: 3780757162834436668, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
+    - target: {fileID: 7993014489794940859, guid: c72d9c62c89ef2944814394fcbc6c327, type: 3}
+      propertyPath: nbSecBetweenPowerUps
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c72d9c62c89ef2944814394fcbc6c327, type: 3}
 --- !u!1001 &1029696518
@@ -712,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 3780757162834436668, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
       propertyPath: m_Name
       value: PowerUp-UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780757162834436668, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3780757162834436669, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
       propertyPath: m_Pivot.x
@@ -1047,6 +1055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerUp-UI droite
       objectReference: {fileID: 0}
+    - target: {fileID: 3780757162834436668, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3780757162834436669, guid: 59fa4bb0d47546948a402e17ccf91059, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1178,7 +1190,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5baaa32e5a34cd0ccb3e63dfafde01b0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.261
   m_Pitch: 1
   Loop: 0
   Mute: 0

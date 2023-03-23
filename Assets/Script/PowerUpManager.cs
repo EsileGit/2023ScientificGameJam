@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using UnityEngine.UI;
 
 public class PowerUpManager : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject powerUpPrefab;
-    public GameObject[] powerUps;
+    public uint gapBetweenPowerUpsPix = 10;
+
+    public GameObject[] powerUps;   // To delete
     public static GameObject gameManager() { return GameObject.FindWithTag(SaveData.GameManagerTag); }
     public int nbSecBetweenPowerUps = 5;
+    public int numberOfPowerUps = 2;
 
     [SerializeField] private PowerUpList allPowerUps = new PowerUpList();
     private float timeSinceLastPowerUpSpawn = 0;
@@ -33,8 +35,7 @@ public class PowerUpManager : MonoBehaviour
         timeSinceLastPowerUpSpawn += Time.deltaTime;
         if (timeSinceLastPowerUpSpawn > nbSecBetweenPowerUps)
         {
-            SpawnFirstPowerUp();
-            SpawnSecondPowerUp();
+            SpawnPowerUps();
             lastSpawned++;
         }
     }
@@ -44,27 +45,30 @@ public class PowerUpManager : MonoBehaviour
         TextAsset jsonTextFile = Resources.Load<TextAsset>("PowerUpList");
         allPowerUps = JsonUtility.FromJson<PowerUpList>(jsonTextFile.ToString());
     }
-
-    private void SpawnFirstPowerUp()
+    private void SpawnPowerUps()
     {
-        SpawnPowerUp(powerUps[0], 0);
-    }
-    private void SpawnSecondPowerUp()
-    {
-        SpawnPowerUp(powerUps[1], 1);
+        float N = numberOfPowerUps;
+        float W = powerUpPrefab.GetComponent<RectTransform>().rect.width;
+        float G = gapBetweenPowerUpsPix;
+        float nextX = -((N / 2.0f)*W + G*(N - 1)/2.0f);
+        PowerUp powerUpData;
+        for (int i = 0; i < numberOfPowerUps; i++)
+        {
+            if (i >= allPowerUps.Count())
+                return;
+            powerUpData = allPowerUps.GetElement(i);
+            SpawnPowerUp(nextX, powerUpData);
+            nextX += W + G;
+        }
     }
 
-    public void SpawnPowerUp(GameObject objUI, int index)
+
+    public void SpawnPowerUp(float x, PowerUp powerUpData)
     {
         timeSinceLastPowerUpSpawn = 0;
-        if (index >= allPowerUps.Count())
-            return;
-        PowerUp powerUpData = allPowerUps.GetElement(index);
-        if (powerUpData == null)
-            return;
-
-        objUI.SetActive(true);
-        GameObject powerUpUi = objUI;//Instantiate(powerUpPrefab, new Vector2(500, 344), Quaternion.identity, canvas.transform);
+        Vector2 center = new Vector2(Screen.width / 2, Screen.height / 2);
+        center.x += x;
+        GameObject powerUpUi = Instantiate(powerUpPrefab, center, Quaternion.identity, canvas.transform);
 
         // Image
         int rootIndex = 0;
@@ -79,8 +83,6 @@ public class PowerUpManager : MonoBehaviour
         Transform titleTransform = powerUpUi.transform.GetChild(2 + rootIndex);
         TMPro.TextMeshProUGUI textTitle = titleTransform.GetComponent<TMPro.TextMeshProUGUI>();
         textTitle.text = powerUpData.title;
-
-        choiceOne = powerUpUi;
     }
 
     public void OnFirstPowerUpClicked()
